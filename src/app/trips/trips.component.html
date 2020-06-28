@@ -1,0 +1,8 @@
+<h2>{{trip.name | uppercase}} Details</h2>
+<div><span>id: </span>{{trip.id}}</div>
+<div><span>name: </span>{{trip.name}}</div>
+<div>
+  <label>
+    <input [(ngModel)]="trip.name" placeholder="name" />
+  </label>
+</div>
