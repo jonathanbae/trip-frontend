@@ -22,6 +22,6 @@ export class TripsComponent implements OnInit {
   }
 
   getTrips(): void {
-    this.trips = this.tripService.getTrips();
+    this.tripService.getTrips().subscribe((trips) => (this.trips = trips));
   }
 }
