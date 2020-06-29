@@ -4,12 +4,4 @@
     <span class="badge">{{trip.id}}</span> {{trip.name}}
   </li>
 </ul>
-<div *ngIf="selectedTrip">
-  <h2>{{selectedTrip.name | uppercase}}</h2>
-  <div><span>id: </span>{{selectedTrip.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedTrip.name" placeholder="name" />
-    </label>
-  </div>
-</div>
+<app-trip-detail [trip]="selectedTrip"></app-trip-detail>
