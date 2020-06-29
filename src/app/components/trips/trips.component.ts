@@ -1,4 +1,5 @@
-import { ITrip } from './../trip';
+import { TRIPS } from './../../../assets/staticdata/mock-trips';
+import { ITrip } from './../../models/trip';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trips.component.scss'],
 })
 export class TripsComponent implements OnInit {
-  trip: ITrip = {
-    id: 1,
-    name: 'Paint Mines',
-  };
+  trips = TRIPS;
+  selectedTrip: ITrip;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onSelect(trip: ITrip): void {
+    this.selectedTrip = trip;
+  }
 }
