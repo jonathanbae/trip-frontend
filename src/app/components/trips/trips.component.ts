@@ -1,4 +1,4 @@
-import { TRIPS } from './../../../assets/staticdata/mock-trips';
+import { TripService } from './../../services/trip.service';
 import { ITrip } from './../../models/trip';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,14 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trips.component.scss'],
 })
 export class TripsComponent implements OnInit {
-  trips = TRIPS;
+  trips: ITrip[];
   selectedTrip: ITrip;
 
-  constructor() {}
+  constructor(private tripService: TripService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getTrips();
+  }
 
   onSelect(trip: ITrip): void {
     this.selectedTrip = trip;
+  }
+
+  getTrips(): void {
+    this.trips = this.tripService.getTrips();
   }
 }
