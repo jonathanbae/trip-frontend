@@ -1,0 +1,34 @@
+import { Component, Input } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+import { Location } from '@angular/common';
+
+@Component({
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss'],
+})
+export class NavigationComponent {
+  @Input() title: string;
+
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.Handset)
+    .pipe(
+      map((result) => result.matches),
+      shareReplay()
+    );
+
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private location: Location
+  ) {}
+
+  get onExplorePage(): boolean {
+    return location.pathname === '/explore';
+  }
+
+  get onTripsPage(): boolean {
+    return location.pathname === '/trips';
+  }
+}
