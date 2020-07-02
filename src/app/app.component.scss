@@ -1,0 +1,32 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  // create a mobile friendly format; lock the nav/title and scroll
+}
+
+.grid-title {
+  grid-area: header;
+}
+
+.grid-nav {
+  grid-area: nav;
+}
+
+.grid-content {
+  grid-area: content;
+}
+
+.grid-footer {
+  grid-area: footer;
+}
+
+@media screen and (min-width: 736px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+      "header nav"
+      "content content"
+      "footer footer"
+  }
+}
