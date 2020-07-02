@@ -1,5 +1,11 @@
+@import '~@angular/material/theming';
+
+.active-link {
+  background: mat-color($mat-light-theme-background, hover, 0.12);
+}
+
 .sidenav-container {
-  height: 100%;
+  height: 100vh;
 }
 
 .sidenav {
@@ -8,7 +14,6 @@
 
 h1 {
   font-size: 3rem;
-  font-weight: bold;
 }
 
 .sidenav .mat-toolbar {
@@ -25,6 +30,10 @@ h1 {
   display: none;
 }
 
+router-outlet {
+  height: 100vw;
+}
+
 @media screen and (min-width: 960px) {
   mat-sidenav-container {
     display: none;
@@ -35,11 +44,11 @@ h1 {
     grid-template-columns: 1fr auto;
     grid-template-areas: "header nav";
 
-    > h1 {
+    >h1 {
       grid-area: "header";
     }
 
-    > div {
+    >div {
       grid-area: "nav";
     }
   }
