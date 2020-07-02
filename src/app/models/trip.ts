@@ -5,6 +5,7 @@ export interface ITrip {
   name: string;
   place: IPlace[];
   // images
+  // thumbnailIconUrl: string;
   //   imageFolderUrl: string;
   // details
   //   itinerary: string; // TODO make this another object; linked list?

@@ -6,5 +6,9 @@
       <input [(ngModel)]="trip.name" placeholder="name" />
     </label>
   </div>
+  <div *ngFor="let place of trip.place">
+    <div>{{place.address}}</div>
+    <div><span>Longitude: </span>{{place.longitude}}<span>, Latitude: </span>{{place.latitude}}</div>
+  </div>
   <button (click)="goBack()">go back</button>
 </div>
