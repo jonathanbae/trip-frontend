@@ -1,10 +1,9 @@
+import { IPlace } from './location';
+
 export interface ITrip {
   id: number;
   name: string;
-  // locations // TODO make these lists or a map of objects
-  //   latitude: number; // TODO remake these a pair
-  //   longitude: number;
-  //   address: string; // TODOD make this another object;
+  place: IPlace[];
   // images
   //   imageFolderUrl: string;
   // details

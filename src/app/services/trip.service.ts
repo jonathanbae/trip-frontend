@@ -14,4 +14,9 @@ export class TripService {
     this.messageService.add('TripService: fetched trips');
     return of(TRIPS);
   }
+
+  getTrip(id: number): Observable<ITrip> {
+    this.messageService.add(`TripService: feetched trip id=${id}`);
+    return of(TRIPS.find((trip) => trip.id === id));
+  }
 }

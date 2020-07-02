@@ -1,7 +1,7 @@
 <h3>Top Trips</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let trip of trips" class="col-1-4">
-    <div class="module hero">
+  <a *ngFor="let trip of trips" class="col-1-4" routerLink="/trips/{{trip.id}}">
+    <div class="">
       <h4>{{trip.name}}</h4>
     </div>
   </a>

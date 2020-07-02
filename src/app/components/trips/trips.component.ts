@@ -10,20 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TripsComponent implements OnInit {
   trips: ITrip[];
-  selectedTrip: ITrip;
 
-  constructor(
-    private tripService: TripService,
-    private messageService: MessageService
-  ) {}
+  constructor(private tripService: TripService) {}
 
   ngOnInit(): void {
     this.getTrips();
-  }
-
-  onSelect(trip: ITrip): void {
-    this.selectedTrip = trip;
-    this.messageService.add(`TripsComponent: Selected trip id=${trip.id}`);
   }
 
   getTrips(): void {

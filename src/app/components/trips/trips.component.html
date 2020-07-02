@@ -1,7 +1,8 @@
 <h2>All Trips</h2>
 <ul class="trips">
-  <li *ngFor="let trip of trips" (click)="onSelect(trip)" [class.selected]="trip===selectedTrip">
-    <span class="badge">{{trip.id}}</span> {{trip.name}}
+  <li *ngFor="let trip of trips">
+    <a routerLink="/trips/{{trip.id}}">
+      <span class="badge">{{trip.id}}</span> {{trip.name}}
+    </a>
   </li>
 </ul>
-<app-trip-detail [trip]="selectedTrip"></app-trip-detail>
