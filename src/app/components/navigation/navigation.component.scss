@@ -1,0 +1,64 @@
+@import '~@angular/material/theming';
+
+.active-link {
+  background: mat-color($mat-light-theme-background, hover, 0.12);
+}
+
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.grid-nav {
+  display: none;
+}
+
+router-outlet {
+  height: 100vw;
+}
+
+@media screen and (min-width: 960px) {
+  mat-sidenav-container {
+    display: none;
+  }
+
+  .grid-nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "header nav";
+
+    >h1 {
+      grid-area: "header";
+    }
+
+    >div {
+      grid-area: "nav";
+    }
+  }
+
+  a {
+    font-size: 1.3rem;
+  }
+
+  .selected {
+    background-color: #aaaaaa;
+    color: #000000;
+  }
+}

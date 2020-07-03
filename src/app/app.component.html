@@ -1,20 +1,9 @@
 <div class="grid-container">
-  <header class="grid-title">
-    <h1>{{title}}</h1>
-  </header>
-  <div class="grid-nav">
-    <nav>
-      <ul>
-        <li><a routerLink="/explore">Explore</a></li>
-        <li><a routerLink="/trips">Trips</a></li>
-      </ul>
-    </nav>
-  </div>
+  <app-navigation [title]="title"></app-navigation>
   <div class="grid-content">
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf="isWeb$ | async"></router-outlet>
   </div>
-  <div class="grid-footer">
+  <div class="grid-footer" *ngIf="isWeb$ | async">
     <span>Copyright 2020</span>
   </div>
 </div>
-<app-messages></app-messages>
