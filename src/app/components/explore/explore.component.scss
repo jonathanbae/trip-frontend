@@ -4,7 +4,7 @@
 
 .trip-card-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
 }
 
 app-trip-card {
