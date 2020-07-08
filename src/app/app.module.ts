@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,12 +13,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { CardComponent } from '@components/forms/card/card.component';
 import { NavigationComponent } from '@components/navigation/navigation.component';
 import { ExploreComponent } from '@components/explore/explore.component';
 import { MessagesComponent } from '@components/messages/messages.component';
+import { DialogComponent } from '@components/forms/dialog/dialog.component';
 
 import { ElevationDirective } from '@directives/elevation.directive';
 
@@ -37,6 +42,7 @@ import { TripDetailComponent } from '@trips/trip-detail/trip-detail.component';
     TripCardComponent,
     ElevationDirective,
     CardComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,12 @@ import { TripDetailComponent } from '@trips/trip-detail/trip-detail.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatDialogModule,
     FlexLayoutModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
