@@ -18,6 +18,6 @@ export class ExploreComponent implements OnInit {
   getTrips(): void {
     this.tripService
       .getTrips()
-      .subscribe((trips) => (this.trips = trips.slice(1, 5)));
+      .subscribe((trips) => (this.trips = trips.slice(1, 6)));
   }
 }

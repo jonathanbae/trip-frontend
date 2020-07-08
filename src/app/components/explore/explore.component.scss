@@ -1,0 +1,12 @@
+.explore-title {
+  margin-left: 16px;
+}
+
+.trip-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+app-trip-card {
+  justify-self: center;
+}
