@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container" *ngIf="isHandset$ | async">
+<mat-sidenav-container class="sidenav-container" *ngIf="isWeb===false">
   <mat-sidenav #drawer class="sidenav" fixedInViewport role="navigation" color="accent">
     <!-- TODO: fix the height/circle of the shading of the circle -->
     <mat-toolbar>{{title}}</mat-toolbar>
@@ -14,14 +14,14 @@
       </button>
       <h1>{{title}}</h1>
     </mat-toolbar>
-    <router-outlet *ngIf="isHandset$ | async"></router-outlet>
-    <div class="grid-footer" *ngIf="isHandset$ | async">
+    <router-outlet></router-outlet>
+    <div class="grid-footer">
       <span>Copyright 2020</span>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
 <!-- Desktop nav bar -->
-<mat-toolbar class="title grid-nav" color="primary" *ngIf="(isHandset$ | async) === false">
+<mat-toolbar class="title grid-nav" color="primary" *ngIf="isWeb">
   <h1>{{title}}</h1>
   <div>
     <a [class.mat-raised-button]="onExplorePage" mat-button [color]="onExplorePage ? 'accent': 'basic'"

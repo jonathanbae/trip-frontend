@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <app-navigation [title]="title"></app-navigation>
+  <app-navigation [title]="title" [isWeb]="isWeb$ | async"></app-navigation>
   <div class="grid-content">
     <router-outlet *ngIf="isWeb$ | async"></router-outlet>
   </div>

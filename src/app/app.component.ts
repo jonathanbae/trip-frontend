@@ -12,7 +12,7 @@ export class AppComponent {
   title = 'Trip Explorer';
 
   isWeb$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Web)
+    .observe(['(min-width: 960px)'])
     .pipe(
       map((result) => result.matches),
       shareReplay()

@@ -1,7 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 import { Location } from '@angular/common';
 
 @Component({
@@ -11,18 +8,9 @@ import { Location } from '@angular/common';
 })
 export class NavigationComponent {
   @Input() title: string;
+  @Input() isWeb: boolean;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(
-      map((result) => result.matches),
-      shareReplay()
-    );
-
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    private location: Location
-  ) {}
+  constructor(private location: Location) {}
 
   get onExplorePage(): boolean {
     return location.pathname === '/explore';
