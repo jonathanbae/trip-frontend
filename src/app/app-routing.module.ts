@@ -1,4 +1,4 @@
-import { TripDetailComponent } from './components/trip-detail/trip-detail.component';
+import { TripDetailComponent } from './components/trips/trip-detail/trip-detail.component';
 import { TripsComponent } from './components/trips/trips.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

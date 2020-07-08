@@ -1,16 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TripDetailComponent } from './components/trip-detail/trip-detail.component';
-import { MessagesComponent } from './components/messages/messages.component';
-import { ExploreComponent } from './components/explore/explore.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavigationComponent } from './components/navigation/navigation.component';
-import { TripsComponent } from './components/trips/trips.component';
-import { TripCardComponent } from './components/trip-card/trip-card.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -19,7 +13,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ElevationDirective } from './components/trip-card/elevation.directive';
+
+import { CardComponent } from '@components/forms/card/card.component';
+import { NavigationComponent } from '@components/navigation/navigation.component';
+import { ExploreComponent } from '@components/explore/explore.component';
+import { MessagesComponent } from '@components/messages/messages.component';
+
+import { ElevationDirective } from '@directives/elevation.directive';
+
+import { TripsComponent } from '@trips/trips.component';
+import { TripCardComponent } from '@trips/trip-card/trip-card.component';
+import { TripDetailComponent } from '@trips/trip-detail/trip-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { ElevationDirective } from './components/trip-card/elevation.directive';
     NavigationComponent,
     TripCardComponent,
     ElevationDirective,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

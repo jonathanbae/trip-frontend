@@ -1,4 +1,4 @@
-import { ITrip } from './../../models/trip';
+import { ITrip } from '@models/trip';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

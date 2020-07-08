@@ -3,7 +3,19 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "baseUrl": "src",
+    "paths": {
+      "@assets/*": ["./assets/*"],
+      "@constants/*": ["./app/constants/*"],
+      "@components/*": ["./app/components/*"],
+      "@directives/*": ["./app/directives/*"],
+      "@models/*": ["./app/models/*"],
+      "@services/*": ["./app/services/*"],
+      "@states/*": ["./app/state-management/*"],
+      // easier access to components
+      "@trips/*": ["./app/components/trips/*"]
+    }
   },
   "files": [
     "src/main.ts",

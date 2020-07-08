@@ -1,5 +1,5 @@
-import { TripService } from './../../services/trip.service';
-import { ITrip } from './../../models/trip';
+import { TripService } from '@services/trip.service';
+import { ITrip } from '@models/trip';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
