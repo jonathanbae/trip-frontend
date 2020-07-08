@@ -7,6 +7,7 @@
   grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
 }
 
-app-trip-card {
+app-trip-card,
+app-card {
   justify-self: center;
 }
