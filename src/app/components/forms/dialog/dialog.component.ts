@@ -35,4 +35,8 @@ export class DialogComponent implements OnInit {
   cancelDialog(): void {
     this.dialogRef.close();
   }
+
+  formHasError(control: string, value: string): boolean {
+    return this.form.controls[control].hasError(value);
+  }
 }

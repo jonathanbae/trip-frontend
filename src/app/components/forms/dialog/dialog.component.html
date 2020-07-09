@@ -1,13 +1,12 @@
   <h2 mat-dialog-title>{{addTitle}}</h2>
   <mat-dialog-content [formGroup]="form">
-    <mat-form-field class="full-width">
+    <mat-form-field class="full-width" [ngClass]="{'form-error': true}">
       <input matInput placeholder="Trip Name" formControlName="tripName">
-      <mat-error *ngIf="form.controls['tripName'].hasError('required')">Trip name is <strong>required</strong>
+      <mat-error *ngIf="formHasError('tripName','required')">Trip name is <strong>required</strong>
       </mat-error>
-      <mat-error *ngIf="form.controls['tripName'].hasError('minlength')">Trip name must be at least <strong>4</strong>
+      <mat-error *ngIf="formHasError('tripName','minlength')">Trip name must be at least <strong>4</strong>
         characters long
       </mat-error>
-
     </mat-form-field>
     <app-address-form [hasUnitNumber]="hasUnitNumber"></app-address-form>
   </mat-dialog-content>
