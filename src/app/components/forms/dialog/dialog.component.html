@@ -1,5 +1,5 @@
   <h2 mat-dialog-title>{{addTitle}}</h2>
-  <mat-dialog-content [formGroup]="form">
+  <mat-dialog-content [formGroup]="form" #tripForm="ngForm">
     <mat-form-field class="full-width" [ngClass]="{'form-error': true}">
       <input matInput placeholder="Trip Name" formControlName="tripName">
       <mat-error *ngIf="formHasError('tripName','required')">Trip name is <strong>required</strong>
@@ -12,5 +12,6 @@
   </mat-dialog-content>
   <mat-dialog-actions>
     <button class="mat-raised-button" (click)="cancelDialog()">Cancel</button>
-    <button class="mat-raised-button mat-primary" (click)="onSubmit()">Add Trip</button>
+    <button class="mat-raised-button mat-primary" (click)="onSubmit()" [disabled]="tripForm.form.invalid">Add
+      Trip</button>
   </mat-dialog-actions>

@@ -18,7 +18,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
       <mat-form-field class="full-width">
         <input matInput placeholder="City" formControlName="city" />
       </mat-form-field>
-      <div *ngIf="!hasUnitNumber">
+      <!-- <div *ngIf="!hasUnitNumber">
         <button
           mat-button
           type="button"
@@ -35,7 +35,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
             formControlName="address2"
           ></textarea>
         </mat-form-field>
-      </div>
+      </div> -->
       <div class="long-lat-form">
         <mat-form-field class="latitude">
           <mat-label>Latitude</mat-label>
