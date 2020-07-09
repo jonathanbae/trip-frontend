@@ -1,3 +1,4 @@
+import { AddressFormComponent } from './components/forms/dialog/address-form.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -43,6 +44,7 @@ import { TripDetailComponent } from '@trips/trip-detail/trip-detail.component';
     ElevationDirective,
     CardComponent,
     DialogComponent,
+    AddressFormComponent,
   ],
   imports: [
     BrowserModule,
