@@ -1,6 +1,6 @@
 import { DialogComponent } from '@components/forms/dialog/dialog.component';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-card',
@@ -9,20 +9,19 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class CardComponent implements OnInit {
   trip: string;
+  dialogConfig: MatDialogConfig;
+  constructor(private dialog: MatDialog) {}
 
-  constructor(public dialog: MatDialog) {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dialogConfig = new MatDialogConfig();
+    this.dialogConfig.width = '80%';
+  }
 
   openFormDialog(): void {
-    const dialogRef = this.dialog.open(DialogComponent, {
-      width: '50%',
-      data: {},
-    });
+    const dialogRef = this.dialog.open(DialogComponent, this.dialogConfig);
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('the dialog was closed');
-      this.trip = result; //TODO make this an iTrip and grab all the data
+      console.log('Dialog output:', result);
     });
   }
 }
