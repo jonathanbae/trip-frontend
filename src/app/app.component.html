@@ -4,6 +4,6 @@
     <router-outlet *ngIf="isWeb$ | async"></router-outlet>
   </div>
   <div class="grid-footer" *ngIf="isWeb$ | async">
-    <span>Copyright 2020</span>
+    <app-footer></app-footer>
   </div>
 </div>

@@ -8,11 +8,9 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$trip-frontend-primary: mat-palette($mat-indigo);
-$trip-frontend-accent: mat-palette($mat-pink, A200, A100, A400);
+@import "./palettes.scss";
+$trip-frontend-primary: mat-palette($md-tripprimary);
+$trip-frontend-accent: mat-palette($md-tripsecondary);
 
 // The warn palette is optional (defaults to red).
 $trip-frontend-warn: mat-palette($mat-red);

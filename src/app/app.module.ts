@@ -31,6 +31,7 @@ import { ElevationDirective } from '@directives/elevation.directive';
 import { TripsComponent } from '@trips/trips.component';
 import { TripCardComponent } from '@trips/trip-card/trip-card.component';
 import { TripDetailComponent } from '@trips/trip-detail/trip-detail.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { TripDetailComponent } from '@trips/trip-detail/trip-detail.component';
     CardComponent,
     DialogComponent,
     AddressFormComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

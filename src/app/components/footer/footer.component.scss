@@ -1,0 +1,9 @@
+@import '../../../styles.scss';
+
+.footer {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 16px;
+  text-align: center;
+  background-color: map_get($trip-frontend-accent, 300);
+}

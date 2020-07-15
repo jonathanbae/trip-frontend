@@ -14,6 +14,8 @@ app-navigation {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr auto;
+    grid-template-rows: 64px auto 200px;
+    height: 100%;
     grid-template-areas:
       "nav nav"
       "content content"
